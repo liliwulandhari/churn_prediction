@@ -45,7 +45,7 @@ def main():
     df=df.drop(['Subscription Type', 'Contract Length'],axis=1)
     
     if st.button('Make Prediction'):
-        features=[[df]]         
+        features=df      
         result = make_prediction(features)
         st.success(f'The prediction is: {result}')
 
